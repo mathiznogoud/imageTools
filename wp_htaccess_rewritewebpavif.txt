@@ -1,0 +1,62 @@
+
+text/x-generic .htaccess ( ASCII text )
+
+# BEGIN CompressX
+# The directives (lines) between "BEGIN CompressX" and "END CompressX" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteOptions Inherit
+RewriteCond %{QUERY_STRING} original$
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule . - [L]
+RewriteCond %{HTTP_ACCEPT} image/avif
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.avif -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.avif -f
+RewriteRule (.+)\.avif /wp-content/compressx-nextgen/uploads/$1.avif [NC,T=image/avif,L]
+RewriteCond %{HTTP_ACCEPT} image/avif
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.webp.avif -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.webp.avif -f
+RewriteRule (.+)\.webp /wp-content/compressx-nextgen/uploads/$1.webp.avif [NC,T=image/avif,L]
+RewriteCond %{HTTP_ACCEPT} image/avif
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.jpg.avif -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.jpg.avif -f
+RewriteRule (.+)\.jpg$ /wp-content/compressx-nextgen/uploads/$1.jpg.avif [NC,T=image/avif,L]
+RewriteCond %{HTTP_ACCEPT} image/avif
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.png.avif -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.png.avif -f
+RewriteRule (.+)\.png$ /wp-content/compressx-nextgen/uploads/$1.png.avif [NC,T=image/avif,L]
+RewriteCond %{HTTP_ACCEPT} image/avif
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.jpeg.avif -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.jpeg.avif -f
+RewriteRule (.+)\.jpeg$ /wp-content/compressx-nextgen/uploads/$1.jpeg.avif [NC,T=image/avif,L]
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.webp -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.webp -f
+RewriteRule (.+)\.webp /wp-content/compressx-nextgen/uploads/$1.webp [NC,T=image/webp,L]
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.jpg.webp -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.jpg.webp -f
+RewriteRule (.+)\.jpg$ /wp-content/compressx-nextgen/uploads/$1.jpg.webp [NC,T=image/webp,L]
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.png.webp -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.png.webp -f
+RewriteRule (.+)\.png$ /wp-content/compressx-nextgen/uploads/$1.png.webp [NC,T=image/webp,L]
+RewriteCond %{HTTP_ACCEPT} image/webp
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.jpeg.webp -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/wp-content/compressx-nextgen/uploads/$1.jpeg.webp -f
+RewriteRule (.+)\.jpeg$ /wp-content/compressx-nextgen/uploads/$1.jpeg.webp [NC,T=image/webp,L]
+</IfModule>
+# END CompressX
+
+
