@@ -1,0 +1,6 @@
+{
+    "require": {
+        "spatie/image-optimizer": "^1.7",
+        "symfony/console": "^6.0"
+    }
+}

@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  image-converter:
+    build: .
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+      - ./images:/app/images  # Optional: mount your images directory
+    working_dir: /app
+
